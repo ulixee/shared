@@ -3,16 +3,16 @@ import { z } from 'zod';
 export const addressValidation = z
   .string()
   .length(61)
-  .regex(/^ar1[ac-hj-np-z02-9]{58}/) // no 1 b i o
-  .refine(x => x.startsWith('ar'), { message: 'This is not an Argon address.' });
+  .regex(/^ar1[ac-hj-np-z02-9]{58}/, 'This is not an Argon address (Bech32 encoded, starting with "ar1").');
+
+export const identityValidation = z
+  .string()
+  .length(61)
+  .regex(/^id1[ac-hj-np-z02-9]{58}/, 'This is not a Ulixee identity (Bech32 encoded hash starting with "id1").');
 
 export const hashValidation = z
   .instanceof(Buffer)
   .refine(x => x.length === 32, { message: 'Hashes must be 32 bytes' });
-
-export const publicKeyValidation = z
-  .instanceof(Buffer)
-  .refine(x => x.length === 32, { message: 'Public keys must be 32 bytes' });
 
 export const isHex = /^(0x|0h)?[0-9A-F]+$/i;
 
@@ -25,11 +25,10 @@ export const blockHeightValidation = z.number().int().nonnegative();
 export const micronoteBatchSlugValidation = z.string().regex(isHex).length(10);
 
 export const micronoteIdValidation = z
-  .instanceof(Buffer)
-  .refine(x => x.length === 32, { message: 'Micronote ids must be 32 bytes' });
+  .string()
+  .length(62)
+  .regex(/^mcr1[ac-hj-np-z02-9]{58}/, 'This is not a Micronote id (Bech32 encoded, starting with "mcr").');
 
 export const centagonTokenValidation = z.bigint().refine(x => x > 0n);
-
-export const nodeIdValidation = z.string().length(32);
 
 export const micronoteTokenValidation = z.number().int().positive();

@@ -1,13 +1,13 @@
 import { z } from 'zod';
 import { addressValidation } from '../common';
 import { IZodSchemaToApiTypes } from '../utils/IZodApi';
-import { WalletSignatureSchema } from '../types/IWalletSignature';
+import { AddressSignatureSchema } from '../types/IAddressSignature';
 
 export const WalletApiSchemas = {
   'Wallet.register': {
     args: z.object({
       address: addressValidation,
-      signature: WalletSignatureSchema,
+      signature: AddressSignatureSchema,
     }),
     result: z.object({
       success: z.boolean(),

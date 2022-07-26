@@ -39,8 +39,8 @@ export const MicronoteBatchApiSchemas = {
       settlements: z
         .object({
           fundsId: fundsIdValidation,
-          fundedCentagons: NoteSchema.shape.centagons,
-          settledCentagons: NoteSchema.shape.centagons,
+          fundedCentagons: z.bigint().refine(x => x >= 0),
+          settledCentagons: z.bigint().refine(x => x >= 0),
         })
         .array(),
     }),
