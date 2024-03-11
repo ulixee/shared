@@ -1,0 +1,1 @@
+{"version":3,"file":"IAddressOwnershipProof.js","sourceRoot":"","sources":["../../../specification/types/IAddressOwnershipProof.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AACxB,sCAAoE;AACpE,iDAAmD;AAEtC,QAAA,2BAA2B,GAAG,OAAC,CAAC,MAAM,CAAC;IAClD,SAAS,EAAE,4BAAmB;IAC9B,QAAQ,EAAE,2BAAkB;IAC5B,qBAAqB,EAAE,gCAAiB,CAAC,KAAK,EAAE;CACjD,CAAC,CAAC"}

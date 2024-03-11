@@ -1,0 +1,30 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var TransactionError;
+(function (TransactionError) {
+    TransactionError[TransactionError["INVALID_LEDGER_USED"] = 0] = "INVALID_LEDGER_USED";
+    TransactionError[TransactionError["INVALID_SOURCES"] = 1] = "INVALID_SOURCES";
+    TransactionError[TransactionError["SOURCE_NOT_FOUND"] = 2] = "SOURCE_NOT_FOUND";
+    TransactionError[TransactionError["FIRST_OUTPUT_MUST_BE_BOND"] = 3] = "FIRST_OUTPUT_MUST_BE_BOND";
+    TransactionError[TransactionError["INVALID_OUTPUTS"] = 4] = "INVALID_OUTPUTS";
+    TransactionError[TransactionError["INVALID_HASH"] = 5] = "INVALID_HASH";
+    TransactionError[TransactionError["SPENT"] = 7] = "SPENT";
+    TransactionError[TransactionError["INSUFFICIENT_CENTAGONS"] = 8] = "INSUFFICIENT_CENTAGONS";
+    TransactionError[TransactionError["INSUFFICIENT_BURN"] = 9] = "INSUFFICIENT_BURN";
+    TransactionError[TransactionError["SINGLE_BOND_OUTPUT_REQUIRED"] = 10] = "SINGLE_BOND_OUTPUT_REQUIRED";
+    TransactionError[TransactionError["SOURCES_FROZEN_AS_BONDS"] = 11] = "SOURCES_FROZEN_AS_BONDS";
+    TransactionError[TransactionError["SOURCE_IS_BURNED"] = 12] = "SOURCE_IS_BURNED";
+    TransactionError[TransactionError["TX_NOT_FOUND"] = 13] = "TX_NOT_FOUND";
+    TransactionError[TransactionError["INVALID_VARIABLE"] = 14] = "INVALID_VARIABLE";
+    TransactionError[TransactionError["INVALID_SIGNATURE"] = 15] = "INVALID_SIGNATURE";
+    TransactionError[TransactionError["NEEDS_COOLDOWN_BEFORE_SPEND"] = 16] = "NEEDS_COOLDOWN_BEFORE_SPEND";
+    TransactionError[TransactionError["ALREADY_CLAIMED"] = 17] = "ALREADY_CLAIMED";
+    TransactionError[TransactionError["INVALID_COINBASE_TX"] = 18] = "INVALID_COINBASE_TX";
+    TransactionError[TransactionError["EXPIRED"] = 19] = "EXPIRED";
+    TransactionError[TransactionError["SYSTEM_ERROR"] = 20] = "SYSTEM_ERROR";
+    TransactionError[TransactionError["SOURCE_NOT_COMMITTED_TO_A_BLOCK"] = 21] = "SOURCE_NOT_COMMITTED_TO_A_BLOCK";
+    TransactionError[TransactionError["COINAGE_CLAIM_MINIMUM_NOT_REACHED"] = 22] = "COINAGE_CLAIM_MINIMUM_NOT_REACHED";
+    TransactionError[TransactionError["SOURCE_IS_SIDECHAINED"] = 23] = "SOURCE_IS_SIDECHAINED";
+})(TransactionError || (TransactionError = {}));
+exports.default = TransactionError;
+//# sourceMappingURL=TransactionError.js.map
